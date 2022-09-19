@@ -3,6 +3,123 @@ body{
     margin: 0px;
     padding: 0px;
 }
+// ................first screen begins..................
+
+.splash {
+    background-color: #1d2630;
+    font-family: sans-serif;
+    .container {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .text {
+            color: white;
+            margin-bottom: 25px;
+            font-size: 20px;
+            letter-spacing: 2px;
+        }
+
+        .loading {
+            width: 100%; 
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .line-box {
+                padding: 2px;
+                width: 40%;
+                height: 20px;
+                border: 2px solid #267591;
+                border-radius: 20px;
+
+                .line {
+                    height: 20px;
+                    border-radius: 20px;
+                    background: #67D295;
+                    animation: loading 5s forwards cubic-bezier(0,0,0,0);
+                    
+                }
+            }
+        }
+        @keyframes loading {
+            0% {
+                width: 0%;
+            }
+            100% {
+                width: 100%;
+            }
+            
+        }
+    }
+}
+// ................first screen ends..................
+// ................Day/Night Button begins..................
+.themeSwitch{
+    position: fixed;
+    left: 1em;
+    top: 85%;
+    border: 2px solid red;
+    z-index: 100;
+}
+.dayNight {
+    // position: fixed;
+    // top: 20px;
+    width: 45px;
+    height: 22px;
+    right: 20px;
+    border: 2px solid;
+    border-radius: 20px;
+    border: 2px solid blue;
+
+}
+.dayNight:before {
+    position: absolute;
+    content: '';
+    left: 1px;
+    // top: 1px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: black;
+
+    transition: 0.4s;
+}
+.dayNight.active:before {
+    left: 24px;
+    background: white;
+}
+.mystyle {
+    // width: 100%;
+    // padding: 25px;
+    background-color: rgb(80, 7, 7);
+    color: white;
+    // font-size: 25px;
+  }
+body.night {
+    background: black;
+    color: white;
+}
+
+    // img {
+    //     border: 1px solid grey;
+    //     transform: scale(2);
+    //     padding: 0.2em;
+    //     border-radius: 5px;
+    //     box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    //     cursor: pointer;
+    // }
+    // .dayNightLine{
+    //     height: 2px;
+    //     background: grey;
+    //      width: 3em;
+    // }
+
+// ................Day/Night Button ends..................
 ul{
     list-style: none;
 }
